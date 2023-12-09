@@ -16,13 +16,14 @@
     const sayDate = function() {
         console.log("Hello Ravi", Date.now())
     }
+    let intervalId;
     // start 
     document.querySelector('#start').addEventListener('click',function(){
-        setInterval(sayDate, 1000)
+         intervalId = setInterval(sayDate, 2000);
     })
     /// stop 
     document.querySelector('#stop').addEventListener('click', function(){
-        clearInterval(sayDate)
+        clearInterval(intervalId);
     })
     
 
